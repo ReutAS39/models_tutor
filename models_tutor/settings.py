@@ -122,3 +122,9 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CELERY_BROKER_URL = 'redis://redis-14422.c253.us-central1-1.gce.cloud.redislabs.com:14422'
+CELERY_RESULT_BACKEND = 'redis://redis-14422.c253.us-central1-1.gce.cloud.redislabs.com:14422'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_SERIALIZER = 'json'
